@@ -1,0 +1,2 @@
+# configrepository
+for test purpose
