@@ -3,20 +3,6 @@ spring:
   cloud:
     config:
       uri: http://configserver:8888
----
-spring:
-  profiles: standalone
-eureka:
-  server:
-    enable-self-preservation: false
-    waitTimeInMsWhenSyncEmpty: 0
-  client:
-    register-with-eureka: false
-    fetch-registry: false
- 
----
-
-spring:
   profiles: cluster
 eureka:
   server:
