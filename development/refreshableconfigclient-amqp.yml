@@ -6,6 +6,3 @@ spring:
     virtual-host: mnrvwrbj
     username: mnrvwrbj
     password: RnAVRqttZHMeSMmZEZJMfTcf7Wg2ACl6 
-	cloud:
-    	config:
-      		uri: http://configserver:8888
