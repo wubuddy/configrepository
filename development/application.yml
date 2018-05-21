@@ -1,0 +1,28 @@
+management:
+  server:
+    servlet:
+      context-path: /admin
+  endpoints:
+   enabled-by-default: false
+   web:
+      exposure:
+        include: 
+          -* 
+  endpoint:
+    info:
+      enabled: true
+    health:
+      enabled: true
+    metrics:
+     enabled: true
+info:
+  app:
+    name: ${project.artifactId}
+  build:
+    version: ${project.version$}
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eurekaserver:8761/eureka 
