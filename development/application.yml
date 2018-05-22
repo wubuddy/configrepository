@@ -5,16 +5,3 @@ management:
       exposure:
         include: 
           -* 
-eureka:
-  instance:
-    hostname: ${eurekaHost}
-    environment: local
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: ${eurekaUrl}
-      
-spring:
-  cloud:
-    config:
-      uri: ${configUrl}
