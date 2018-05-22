@@ -7,14 +7,14 @@ management:
           -* 
 eureka:
   instance:
-    hostname: ${hostName:eurekaserver}
+    hostname: ${eurekaHost}
     environment: local
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://${hostName}:8761/eureka
+      defaultZone: ${eurekaUrl}
       
 spring:
   cloud:
     config:
-      uri: http://configserver:8888
+      uri: ${configUrl}
