@@ -1,6 +1,4 @@
 ---
-spring:  
-  profiles: cluster
 eureka:
   server:
     enable-self-preservation: false
