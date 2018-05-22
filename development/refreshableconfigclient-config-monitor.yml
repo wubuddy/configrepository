@@ -1,5 +1,4 @@
 spring:
-  profiles: amqp 
   rabbitmq:
     host: mosquito.rmq.cloudamqp.com
     port: 5672
