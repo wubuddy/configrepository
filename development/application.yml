@@ -1,5 +1,5 @@
 #eurekaHost:  eurekaserver-service
-eurekaHost:  ${eurekaHost:localhost}
+#eurekaHost:  ${eurekaHost:eurekaserver-service}
 #eurekaUrl: http://${eurekaHost}:8761/eureka
 management:
   endpoints:
@@ -8,10 +8,11 @@ management:
       exposure:
         include: 
           -* 
+
 eureka:
   instance:
-    hostname: ${eurekaHost:localhost}
+    hostname: eurekaserver-service
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://${eurekaHost:localhost}:8761/eureka 
+      defaultZone: http://eurekaserver-service:8761/eureka 
