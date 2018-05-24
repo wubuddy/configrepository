@@ -1,6 +1,7 @@
 eureka:
   server:
     enable-self-preservation: false
+    waitTimeInMsWhenSyncEmpty: 0
   client:
     register-with-eureka: false
     fetch-registry: false
