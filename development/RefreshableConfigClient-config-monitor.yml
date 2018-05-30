@@ -1,7 +1,0 @@
-spring:
-  rabbitmq:
-    host: mosquito.rmq.cloudamqp.com
-    port: 5672
-    virtual-host: mnrvwrbj
-    username: mnrvwrbj
-    password: RnAVRqttZHMeSMmZEZJMfTcf7Wg2ACl6 
