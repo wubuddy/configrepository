@@ -1,6 +1,4 @@
-#eurekaHost:  eurekaserver-service
-#eurekaHost:  ${eurekaHost:eurekaserver-service}
-#eurekaUrl: http://${eurekaHost}:8761/eureka
+eurekaUrl:   $[eurekaUrl:http://localhost:8761/eureka}
 management:
   endpoints:
    enabled-by-default: false
@@ -8,13 +6,17 @@ management:
       exposure:
         include: 
           -* 
+spring:
+  rabbitmq:
+    host: mosquito.rmq.cloudamqp.com
+    port: 5672
+    virtual-host: mnrvwrbj
+    username: mnrvwrbj
+    password: RnAVRqttZHMeSMmZEZJMfTcf7Wg2ACl6
 
 eureka:
-  instance:
-    hostname: eurekaserver-service
-    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://eurekaserver-service:8761/eureka 
-
+      defaultZone: ${eurekaUrl}
+      
  #curl -v -H "Content-Type: application/json" -H "X-Event-Key: repo:push" -H "X-Hook-UUID: webhook-uuid"  -X POST  http://localhost:8888/monitor -d  "{\"push\": {\"changes\": []} }" 
