@@ -17,6 +17,6 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: ${eurekaUrl}
+      defaultZone: http://eurekaserver-service:8761/eureka
       
  #curl -v -H "Content-Type: application/json" -H "X-Event-Key: repo:push" -H "X-Hook-UUID: webhook-uuid"  -X POST  http://localhost:8888/monitor -d  "{\"push\": {\"changes\": []} }" 
