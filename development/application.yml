@@ -13,10 +13,20 @@ spring:
     virtual-host: mnrvwrbj
     username: mnrvwrbj
     password: RnAVRqttZHMeSMmZEZJMfTcf7Wg2ACl6
-
+  cloud:
+    config:
+#      uri:  http://ec2-13-56-231-47.us-west-1.compute.amazonaws.com:8888
+       uri:  http://localhost:8888
 eureka:
   client:
     service-url:
-      defaultZone: http://ec2-13-56-231-47.us-west-1.compute.amazonaws.com:8761/eureka
-      
+#      defaultZone: http://ec2-13-56-231-47.us-west-1.compute.amazonaws.com:8761/eureka
+      defaultZone: http://localhost:8761/eureka
+
+  rabbitmq:
+    host: mosquito.rmq.cloudamqp.com
+    port: 5672
+    virtual-host: mnrvwrbj
+    username: mnrvwrbj
+    password: RnAVRqttZHMeSMmZEZJMfTcf7Wg2ACl6     
  #curl -v -H "Content-Type: application/json" -H "X-Event-Key: repo:push" -H "X-Hook-UUID: webhook-uuid"  -X POST  http://localhost:8888/monitor -d  "{\"push\": {\"changes\": []} }" 
